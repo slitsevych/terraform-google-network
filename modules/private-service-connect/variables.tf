@@ -19,7 +19,7 @@ variable "project_id" {
   type        = string
 }
 
-variable "network_self_link" {
+variable "network_self_links" {
   description = "List of VPC self links that can see this zone."
   default     = []
   type        = list(string)
