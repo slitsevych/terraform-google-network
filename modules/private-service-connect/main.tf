@@ -38,7 +38,8 @@ resource "google_compute_global_forwarding_rule" "forwarding_rule_private_servic
   network                 = var.main_network_self_link
   ip_address              = google_compute_global_address.private_service_connect.id
   load_balancing_scheme   = ""
-  allow_psc_global_access = var.psc_global_access
+  no_automate_dns_zone    = var.no_automate_dns_zone
+  # allow_psc_global_access = var.psc_global_access
 
   dynamic "service_directory_registrations" {
     for_each = var.service_directory_namespace != null || var.service_directory_region != null ? [1] : []

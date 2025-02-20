@@ -80,3 +80,8 @@ variable "psc_global_access" {
   type        = bool
   default     = false
 }
+
+variable "no_automate_dns_zone" {
+  type        = bool
+  default     = false
+}
