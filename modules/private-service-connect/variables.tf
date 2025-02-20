@@ -20,8 +20,9 @@ variable "project_id" {
 }
 
 variable "network_self_link" {
-  description = "Network self link for Private Service Connect."
-  type        = string
+  description = "List of VPC self links that can see this zone."
+  default     = []
+  type        = list(string)
 }
 
 variable "dns_code" {

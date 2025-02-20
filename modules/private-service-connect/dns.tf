@@ -27,9 +27,7 @@ module "googleapis" {
   domain      = "googleapis.com."
   description = "Private DNS zone to configure ${local.googleapis_url}"
 
-  private_visibility_config_networks = [
-    var.network_self_link
-  ]
+  private_visibility_config_networks = var.network_self_links
 
   recordsets = [
     {
@@ -60,9 +58,7 @@ module "gcr" {
   domain      = "gcr.io."
   description = "Private DNS zone to configure gcr.io"
 
-  private_visibility_config_networks = [
-    var.network_self_link
-  ]
+  private_visibility_config_networks = var.network_self_links
 
   recordsets = [
     {
@@ -93,9 +89,7 @@ module "pkg_dev" {
   domain      = "pkg.dev."
   description = "Private DNS zone to configure pkg.dev"
 
-  private_visibility_config_networks = [
-    var.network_self_link
-  ]
+  private_visibility_config_networks = var.network_self_links
 
   recordsets = [
     {
