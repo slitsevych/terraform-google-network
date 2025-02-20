@@ -24,14 +24,14 @@ terraform {
     }
     google-beta = {
       source  = "hashicorp/google-beta"
-      version = ">= 4.64, < 7"
+      version = ">= 6.13, < 7"
     }
   }
 
   provider_meta "google" {
-    module_name = "blueprints/terraform/terraform-google-network:vpc/v9.3.0"
+    module_name = "blueprints/terraform/terraform-google-network:vpc/v10.0.0"
   }
   provider_meta "google-beta" {
-    module_name = "blueprints/terraform/terraform-google-network:vpc/v9.3.0"
+    module_name = "blueprints/terraform/terraform-google-network:vpc/v10.0.0"
   }
 }
